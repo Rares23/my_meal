@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_meal/home/pages/home_page.dart';
+import 'package:my_meal/categories/pages/categories_page.dart';
 import 'package:my_meal/utils/strings.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(title: Strings.appTitle),
+      home: CategoriesPage(),
     );
   }
 }
