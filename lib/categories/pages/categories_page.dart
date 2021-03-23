@@ -5,6 +5,8 @@ import 'package:my_meal/categories/data/seeds/categories_seed.dart';
 import 'package:my_meal/utils/strings.dart';
 
 class CategoriesPage extends StatefulWidget {
+  static const String routeName = '/categories';
+
   @override
   _CategoriesPageState createState() => _CategoriesPageState();
 }
