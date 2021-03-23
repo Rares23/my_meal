@@ -10,19 +10,8 @@ class CategoryItem extends StatelessWidget {
       {@required this.title, @required this.color, @required this.categoryId});
 
   void selectCategory(BuildContext context) {
-    // Navigator.of(context).push(
-    //   MaterialPageRoute(
-    //     builder: (_) {
-    //       return RecipesPage(
-    //         categoryId: categoryId,
-    //         categoryTitle: title,
-    //       );
-    //     },
-    //   ),
-    // );
-
     Navigator.of(context).pushNamed(
-      '/recipes-list',
+      RecipesPage.routeName,
       arguments: {
         'id': categoryId,
         'title': title,
