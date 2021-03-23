@@ -17,10 +17,14 @@ class _CategoriesPageState extends State<CategoriesPage> {
         title: Text(Strings.appTitle),
       ),
       body: GridView(
+        padding: EdgeInsets.all(16),
         children: [
           ...CATEGORIES_SEEDS
-              .map((Category category) =>
-                  CategoryItem(title: category.title, color: category.color))
+              .map((Category category) => CategoryItem(
+                    title: category.title,
+                    color: category.color,
+                    categoryId: category.id,
+                  ))
               .toList(),
         ],
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
