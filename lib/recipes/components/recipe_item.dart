@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_meal/recipes/data/utils/affordability.dart';
 import 'package:my_meal/recipes/data/utils/complexity.dart';
+import 'package:my_meal/recipes/pages/recipe_details_page.dart';
 
 class RecipeItem extends StatelessWidget {
   final String id;
@@ -45,13 +46,20 @@ class RecipeItem extends StatelessWidget {
     }
   }
 
-  void selectRecipe() {}
+  void selectRecipe(BuildContext context) {
+    Navigator.of(context).pushNamed(
+      RecipeDetailsPage.routeName,
+      arguments: {
+        'id': id,
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: InkWell(
-        onTap: selectRecipe,
+        onTap: () => selectRecipe(context),
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
