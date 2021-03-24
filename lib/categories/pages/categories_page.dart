@@ -14,27 +14,22 @@ class CategoriesPage extends StatefulWidget {
 class _CategoriesPageState extends State<CategoriesPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(Strings.appTitle),
-      ),
-      body: GridView(
-        padding: EdgeInsets.all(16),
-        children: [
-          ...CATEGORIES_SEEDS
-              .map((Category category) => CategoryItem(
-                    title: category.title,
-                    color: category.color,
-                    categoryId: category.id,
-                  ))
-              .toList(),
-        ],
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
-        ),
+    return GridView(
+      padding: EdgeInsets.all(16),
+      children: [
+        ...CATEGORIES_SEEDS
+            .map((Category category) => CategoryItem(
+                  title: category.title,
+                  color: category.color,
+                  categoryId: category.id,
+                ))
+            .toList(),
+      ],
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        childAspectRatio: 3 / 2,
+        crossAxisSpacing: 20,
+        mainAxisSpacing: 20,
       ),
     );
   }
