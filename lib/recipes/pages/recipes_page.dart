@@ -25,6 +25,10 @@ class RecipesPage extends StatelessWidget {
           return RecipeItem(
             id: filteredRecipes[index].id,
             title: filteredRecipes[index].title,
+            imageUrl: filteredRecipes[index].imageUrl,
+            duration: filteredRecipes[index].duration,
+            affordability: filteredRecipes[index].affordability,
+            complexity: filteredRecipes[index].complexity,
           );
         },
       ),
