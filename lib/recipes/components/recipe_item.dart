@@ -52,7 +52,9 @@ class RecipeItem extends StatelessWidget {
       arguments: {
         'id': id,
       },
-    );
+    ).then((value) {
+      print(value);
+    });
   }
 
   @override

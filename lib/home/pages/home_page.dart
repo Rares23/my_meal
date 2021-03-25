@@ -54,6 +54,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Recipes'),
       ),
+      drawer: Drawer(
+        child: Text('The Drawer'),
+      ),
       body: _pages[_selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Theme.of(context).primaryColor,
